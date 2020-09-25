@@ -3,6 +3,7 @@ package com.example.epubreader;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case  R.id.help:
-                Toast.makeText(this,"Help",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SimpleContentActivity.class));
                 break;
             case R.id.about:
-                Toast.makeText(this,"About",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SimpleContentActivity.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
